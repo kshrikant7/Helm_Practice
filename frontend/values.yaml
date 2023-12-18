@@ -1,0 +1,27 @@
+# frontend-chart/values.yaml
+replicaCount: 1
+
+image:
+  repository: shrikantk7/frontendtest
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  name: http
+  protocol: TCP
+  targetPort: 80
+  port: 80
+  containerPort: 3000
+  nodePort: 30001
+
+serviceAccount:
+  create: false
+
+ingress:
+  enabled: false
+
+autoscaling:
+ enabled: false
+
+resources: {}

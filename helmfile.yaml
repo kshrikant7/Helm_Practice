@@ -1,0 +1,8 @@
+releases:
+  - name: frontend
+    chart: ./frontend
+    installed: true
+
+  - name: backend
+    chart: ./backend
+    installed: true

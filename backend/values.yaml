@@ -1,0 +1,27 @@
+# backend-chart/values.yaml
+replicaCount: 1
+
+image:
+  repository: shrikantk7/backendtest
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  name: http
+  protocol: TCP
+  targetPort: http
+  port: 5000
+  containerPort: 5000
+  nodePort: 30002
+
+serviceAccount:
+  create: false
+
+ingress:
+  enabled: false
+
+autoscaling:
+ enabled: false
+
+resources: {}
