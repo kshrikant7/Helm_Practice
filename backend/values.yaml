@@ -7,7 +7,7 @@ image:
   pullPolicy: Always
 
 service:
-  type: ClusterIP
+  type: NodePort
   name: http
   protocol: TCP
   targetPort: 5000
