@@ -20,6 +20,9 @@ serviceAccount:
 
 ingress:
   enabled: false
+  host: calculator.com
+  pathType: Prefix
+  path: /frontend
 
 autoscaling:
  enabled: false
