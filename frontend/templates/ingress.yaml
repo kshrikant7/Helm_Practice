@@ -1,7 +1,11 @@
+#Frontend Ingress
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "frontend.fullname" . }}
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
   labels:
     {{- include "frontend.labels" . | nindent 4 }}
 spec:

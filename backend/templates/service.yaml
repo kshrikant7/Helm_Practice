@@ -12,6 +12,5 @@ spec:
       targetPort: {{ .Values.service.targetPort }}
       protocol: {{ .Values.service.protocol }}
       name: {{ .Values.service.name }}
-      nodePort: {{ .Values.service.nodePort }}
   selector:
     {{- include "backend.selectorLabels" . | nindent 4 }}

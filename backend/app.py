@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=['http://192.168.49.2:30001'])
+CORS(app, origins=['http://calculator.com/frontend'])
 
 @app.route('/', methods=['GET', 'POST'])
 def calculate():

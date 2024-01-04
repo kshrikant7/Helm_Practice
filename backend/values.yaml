@@ -7,19 +7,17 @@ image:
   pullPolicy: Always
 
 service:
-  type: NodePort
+  type: ClusterIP
   name: http
   protocol: TCP
   targetPort: 5000
   port: 5000
-  containerPort: 5000
-  nodePort: 30002
 
 serviceAccount:
   create: false
 
 ingress:
-  enabled: false
+  enabled: true
   host: calculator.com
   pathType: Prefix
   path: /backend
