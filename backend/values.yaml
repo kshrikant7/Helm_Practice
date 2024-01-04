@@ -2,7 +2,7 @@
 replicaCount: 1
 
 image:
-  repository: shrikantk7/backendtest
+  repository: shrikantk7/tech_backend
   tag: latest
   pullPolicy: Always
 
